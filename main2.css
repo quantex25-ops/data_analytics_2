@@ -1,35 +1,152 @@
+/* =================================
+   MAIN PAGE ONLY (Scoped)
+   Applies ONLY to body#home
+================================= */
+
 body#home {
-    background: #fdf6f0;
-    color: #2c2c2c;
+    background: #fdf6f0;       /* soft cream */
+    color: #2c2c2c;            /* dark gray */
+    font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
 }
 
+/* ===============================
+   NAVBAR
+================================ */
 body#home .navbar {
-    background: #6b5b95 !important;
+    background: #6b5b95 !important;  /* muted purple */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 body#home .navbar-brand,
 body#home .navbar-nav .nav-link {
     color: #fdf6f0 !important;
+    font-weight: 500;
 }
 
 body#home .navbar-nav .nav-link:hover {
-    color: #ff6f61 !important;
+    color: #ff6f61 !important;  /* coral */
 }
 
+/* ===============================
+   HERO / JUMBOTRON
+================================ */
+body#home .hero {
+    background: #fdf6f0;
+    border-radius: 26px;
+    margin-top: 90px;
+    padding: 80px 25px;
+    box-shadow: 0 28px 60px rgba(44, 44, 44, 0.15);
+}
+
+body#home .hero h1 {
+    color: #2c2c2c;
+    font-weight: 700;
+}
+
+body#home .hero .lead {
+    color: #6b5b95;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Highlight name */
 body#home .highlight {
     color: #ff6f61;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+body#home .btn {
+    border-radius: 18px;
+    padding: 12px 26px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 
 body#home .custom-btn {
     background: #ff6f61;
     border: 2px solid #ff6f61;
     color: #2c2c2c;
+    border-radius: 999px;
+    padding: 14px 34px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0.2px;
 }
 
 body#home .custom-btn:hover {
     background: #e65550;
     border-color: #e65550;
     color: #2c2c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(255, 111, 97, 0.35);
+    text-decoration: none;
+}
+
+body#home .custom-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.35);
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+body#home h2 {
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+body#home .intro {
+    color: #6b5b95;
+}
+
+/* ===============================
+   PORTFOLIO CARDS
+================================ */
+body#home .project-row {
+    margin-top: 45px;
+    row-gap: 30px;
+}
+
+body#home .fancy-card {
+    background: #ffffff;
+    border-radius: 26px;
+    border: 1px solid rgba(44, 44, 44, 0.15);
+    box-shadow: 0 16px 40px rgba(44, 44, 44, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body#home .fancy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 32px 70px rgba(44, 44, 44, 0.25);
+}
+
+body#home .fancy-card .card-title {
+    font-weight: 600;
+    color: #2c2c2c;
+}
+
+body#home .fancy-card .card-text {
+    color: #6b5b95;
+}
+
+/* ===============================
+   CONTACT FORM
+================================ */
+body#home .form-div {
+    background: #ffffff;
+    border-radius: 26px;
+    border: 1px solid rgba(44, 44, 44, 0.15);
+    box-shadow: 0 28px 65px rgba(44, 44, 44, 0.18);
+    padding: 30px;
+}
+
+body#home .form-control {
+    border-radius: 14px;
+    border: 1px solid rgba(44, 44, 44, 0.25);
 }
 
 body#home .form-control:focus {
@@ -37,11 +154,57 @@ body#home .form-control:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.25);
 }
 
+body#home .was-validated .form-control:invalid,
+body#home .form-control.is-invalid {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 0.2rem rgba(211, 47, 47, 0.18);
+}
+
+body#home .was-validated .form-control:valid,
+body#home .form-control.is-valid {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.16);
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+body#home .socicons-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-left: 0;
+    margin: 35px 0 10px;
+}
+
 body#home .socicons-list li a {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+
     background: #6b5b95;
     color: #fdf6f0;
+    font-size: 24px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 body#home .socicons-list li a:hover {
+    transform: translateY(-3px);
     background: #ff6f61;
+    box-shadow: 0 14px 28px rgba(44, 44, 44, 0.18);
+}
+
+/* ===============================
+   COPYRIGHT
+================================ */
+body#home .copyright {
+    color: rgba(44, 44, 44, 0.75);
+    margin-top: 28px;
+    font-size: 0.95rem;
 }
